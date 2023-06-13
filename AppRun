@@ -1,0 +1,42 @@
+#!/bin/bash
+HERE=$(cd "${0%/*}" && echo $PWD)
+
+ZENITY_TITLE='Running'
+ZENITY_ICON_NAME=$(cat "$HERE/"*.desktop | grep -w -m1 'Icon' | cut -d '=' -f2)
+
+PROGNAME='WinRAR'
+ICON="$HERE/ico.png"
+DIRETORIO_CONFIG="$HOME/.config/WinRAR_AppImage"
+PROGDIR="$DIRETORIO_CONFIG/$PROGNAME"
+
+Diretorio_do_executavel_windows='C:\\WinRAR\\'
+Arquivo_exe_executavel_windows='C:\\WinRAR\\WinRAR.exe'
+Arquitetura_do_windows="win64" # win32 para windows 32bits (i386) ou win64 para windows de 64bits
+Dlls_para_desabilitar="d3d12.dll,winemenubuilder.exe,winemine.exe,winedbg.exe,progman.exe,reg.exe,regsvr32.exe,robocopy.exe,taskmgr.exe,uninstaller.exe,winecfg.exe,control.exe,appwiz.cpl,inetcpl.cpl,mscoree,mshtml,atiadlxx,nvapi64,nvapi"
+mkdir -p "$DIRETORIO_CONFIG"
+
+function function_zenity_running() {
+    timeout 3 zenity --display="$DISPLAY" --width=400 --height=100 --progress --pulsate --no-cancel --title="$ZENITY_TITLE" --text="<span size=\"xx-large\">Running $PROGNAME</span>" --icon-name="$ZENITY_ICON_NAME" --window-icon="$ICON" --auto-close
+}
+
+# Criar diretório para atalhos e Configurações #
+mkdir -p "$PROGDIR/dosdevices" "$PROGDIR/drive_c/users/$USER/Desktop" "$PROGDIR/drive_c/users/Public/Desktop"
+
+# Deleta atalhos antigos SE existirem #
+mkdir -p "$PROGDIR/drive_c/$PROGNAME" #"$PROGDIR/drive_c/Program Files/"
+
+find "$PROGDIR/"* -maxdepth 1 -type l -ls -delete
+ln -s "$HERE/system.reg" "/$PROGDIR/system.reg"
+ln -s "$HERE/user.reg" "/$PROGDIR/user.reg"
+ln -s "$HERE/.update-timestamp" "/$PROGDIR/.update-timestamp"
+
+find "$PROGDIR/dosdevices/"* -maxdepth 1 -type l -ls -delete #comando deleta atalhos
+find "$PROGDIR/drive_c/"* -maxdepth 1 -type l -ls -delete #comando deleta atalhos
+find "$PROGDIR/drive_c/$PROGNAME/"* -maxdepth 1 -type l -ls -delete #comando deleta atalhos
+ln -s "/" "$PROGDIR/dosdevices/z:"
+ln -s "$HOME" "$PROGDIR/dosdevices/h:"
+ln -s "$PROGDIR/drive_c" "$PROGDIR/dosdevices/c:"
+ln -s "$HERE/drive_c/$PROGNAME/"* "$PROGDIR/drive_c/$PROGNAME/"
+ln -s "$HERE/drive_c/"* "$PROGDIR/drive_c/"
+
+__GL_SHADER_DISK_CACHE=0 __GL_SHADER_DISK_CACHE_PATH="$PROGDIR/" XDG_CACHE_HOME="$PROGDIR/" LD_LIBRARY_PATH="${HERE}/lib:${HERE}/lib64:/lib:/lib/i386-linux-gnu:/lib/x86_64-linux-gnu:/lib32:/lib64:/libx32:/usr/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib32:/usr/lib64:/usr/libx32:${LD_LIBRARY_PATH}" XDG_DATA_DIRS="${HERE}/share:${HERE}/usr/share:/usr/share:/usr/local/share:$HOME/.local/share:${XDG_DATA_DIRS}" PATH="${HERE}/bin:/usr/bin:/sbin:/usr/sbin:$PATH" FONTCONFIG_PATH="${HERE}/etc/fonts" DISPLAY="$DISPLAY" WINE_LARGE_ADDRESS_AWARE=1 NTFS_MODE=1 WINE64PRELOADER="${HERE}/bin/wine64-preloader" WINEPRELOADER="${HERE}/bin/wine-preloader" WINEPATH="${HERE}/bin/winepath" WINEDBG="${HERE}/bin/winedbg" WINECONSOLE="${HERE}/bin/wineconsole" WINECFG="${HERE}/bin/winecfg" WINEBOOT="${HERE}/bin/wineboot" WINESERVER="${HERE}/bin/wineserver" WINEESYNC=1 WINE64="${HERE}/bin/wine64" WINE="${HERE}/bin/wine" USE_SYSTEM_WINE=0 WINEDLLOVERRIDES="$Dlls_para_desabilitar=d;$Dlls_modo_build=b;$Dlls_nativas_sem_vulkan=n" WINEPREFIX="$PROGDIR" WINEARCH="$Arquitetura_do_windows" "${HERE}/bin/wine64" 'C:\\windows\\system32\\start.exe' /wait /b /d "$Diretorio_do_executavel_windows" "$Arquivo_exe_executavel_windows" "H:\\$@" | ZENITY_TITLE="$PROGNAME" function_zenity_running
