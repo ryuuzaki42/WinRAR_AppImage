@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=WinRAR-6.22
+Exec=WinRAR
+Terminal=false
+Type=Application
+StartupNotify=false
+Icon=ico
+StartupWMClass=WinRAR
+MimeType=application/x-rar:application/x-zip;application/x-compressed-rar:application/x-compressed-zip
+Categories=GTK;Archiving;Compression;Utility;
