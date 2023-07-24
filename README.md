@@ -1,7 +1,7 @@
 
 # WinRAR_AppImage
 
-## Remove git folder (.git/) before make the AppImage
+Remove the git folder (.git/) before creating the AppImage
 
 https://www.win-rar.com/
 
