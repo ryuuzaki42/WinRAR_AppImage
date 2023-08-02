@@ -1,0 +1,44 @@
+name: Create new realease
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install fuse and libfuse2
+      run: sudo apt install fuse libfuse2
+
+
+    - name: appimagetool
+      run: |
+        set -x
+        cd ../
+
+        wget -q https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+        chmod +x appimagetool-x86_64.AppImage
+        pwd; ls -lah
+
+    - name: Make AppImage
+      run: |
+        set -x
+
+        rm -rv .git/ .github/ .gitignore
+        cd ../
+
+        ARCH=x86_64 ./appimagetool-x86_64.AppImage WinRAR_AppImage/
+        pwd; ls -lah
+
+        #mv WinRAR-x86_64.AppImage ../WinRAR-"$opera_version"-x86_64-1_JB.AppImage
+        #cd ../
+        #md5sum WinRAR-"$opera_version"-x86_64-1_JB.AppImage > WinRAR-"$opera_version"-x86_64-1_JB.AppImage.md5
+        pwd; ls -lah
+
+    - uses: xresloader/upload-to-github-release@main
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          file: "WinRAR*.AppImage; WinRAR*.md5"
+          release_id: ${{ steps.create_release.outputs.id }}
+          verbose: true
+          draft: false
