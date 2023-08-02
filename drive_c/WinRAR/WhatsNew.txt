@@ -1,6 +1,38 @@
                 WinRAR - What's new in the latest version
 
 
+   Version 6.23
+
+   1. Added extraction of XZ archives utilizing ARM64 filter.
+   
+   2. Rar$LS* temporary files, created when extracting or testing multiple
+      archives from Windows context menu, are now deleted immediately.
+      Previously they were deleted only on next WinRAR runs and only
+      if they were at least 1 hour old.
+   
+   3. Bugs fixed:
+
+      a) a security issue involving out of bounds write is fixed
+         in RAR4 recovery volumes processing code.
+
+         We are thankful to goodbyeselene working with Trend Micro Zero Day
+         Initiative for letting us know about this bug;
+
+      b) WinRAR could start a wrong file after a user double clicked
+         an item in a specially crafted archive.
+
+         We are thankful to Andrey Polovinkin from Group-IB Threat
+         Intelligence unit for letting us know about this bug;
+
+      c) if both NTFS and Unix time extra fields were available for a file
+         in ZIP archive, extraction command ignored the second extra field
+         even if it provided more time fields than first one;
+
+      d) interface themes were applied to archive icons even if
+         "Apply to archive icons" option in "Organize themes" dialog
+         was turned off.
+
+   
    Version 6.22
 
    1. Bugs fixed:
