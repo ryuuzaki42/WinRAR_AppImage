@@ -5,7 +5,7 @@ ZENITY_TITLE='Running'
 ZENITY_ICON_NAME=$(cat "$HERE/"*.desktop | grep -w -m1 'Icon' | cut -d '=' -f2)
 
 PROGNAME='WinRAR'
-ICON="$HERE/ico.png"
+ICON="$HERE/winrar.png"
 DIRETORIO_CONFIG="$HOME/.config/WinRAR_AppImage"
 PROGDIR="$DIRETORIO_CONFIG/$PROGNAME"
 
@@ -30,13 +30,31 @@ ln -s "$HERE/system.reg" "/$PROGDIR/system.reg"
 ln -s "$HERE/user.reg" "/$PROGDIR/user.reg"
 ln -s "$HERE/.update-timestamp" "/$PROGDIR/.update-timestamp"
 
-find "$PROGDIR/dosdevices/"* -maxdepth 1 -type l -ls -delete #comando deleta atalhos
-find "$PROGDIR/drive_c/"* -maxdepth 1 -type l -ls -delete #comando deleta atalhos
-find "$PROGDIR/drive_c/$PROGNAME/"* -maxdepth 1 -type l -ls -delete #comando deleta atalhos
+find "$PROGDIR/dosdevices/"* -maxdepth 1 -type l -ls -delete # del shortcuts
+find "$PROGDIR/drive_c/"* -maxdepth 1 -type l -ls -delete
+find "$PROGDIR/drive_c/$PROGNAME/"* -maxdepth 1 -type l -ls -delete
+
 ln -s "/" "$PROGDIR/dosdevices/z:"
 ln -s "$HOME" "$PROGDIR/dosdevices/h:"
 ln -s "$PROGDIR/drive_c" "$PROGDIR/dosdevices/c:"
 ln -s "$HERE/drive_c/$PROGNAME/"* "$PROGDIR/drive_c/$PROGNAME/"
 ln -s "$HERE/drive_c/"* "$PROGDIR/drive_c/"
 
-__GL_SHADER_DISK_CACHE=0 __GL_SHADER_DISK_CACHE_PATH="$PROGDIR/" XDG_CACHE_HOME="$PROGDIR/" LD_LIBRARY_PATH="${HERE}/lib:${HERE}/lib64:/lib:/lib/i386-linux-gnu:/lib/x86_64-linux-gnu:/lib32:/lib64:/libx32:/usr/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib32:/usr/lib64:/usr/libx32:${LD_LIBRARY_PATH}" XDG_DATA_DIRS="${HERE}/share:${HERE}/usr/share:/usr/share:/usr/local/share:$HOME/.local/share:${XDG_DATA_DIRS}" PATH="${HERE}/bin:/usr/bin:/sbin:/usr/sbin:$PATH" FONTCONFIG_PATH="${HERE}/etc/fonts" DISPLAY="$DISPLAY" WINE_LARGE_ADDRESS_AWARE=1 NTFS_MODE=1 WINE64PRELOADER="${HERE}/bin/wine64-preloader" WINEPRELOADER="${HERE}/bin/wine-preloader" WINEPATH="${HERE}/bin/winepath" WINEDBG="${HERE}/bin/winedbg" WINECONSOLE="${HERE}/bin/wineconsole" WINECFG="${HERE}/bin/winecfg" WINEBOOT="${HERE}/bin/wineboot" WINESERVER="${HERE}/bin/wineserver" WINEESYNC=1 WINE64="${HERE}/bin/wine64" WINE="${HERE}/bin/wine" USE_SYSTEM_WINE=0 WINEDLLOVERRIDES="$Dlls_para_desabilitar=d;$Dlls_modo_build=b;$Dlls_nativas_sem_vulkan=n" WINEPREFIX="$PROGDIR" WINEARCH="$Arquitetura_do_windows" "${HERE}/bin/wine64" 'C:\\windows\\system32\\start.exe' /wait /b /d "$Diretorio_do_executavel_windows" "$Arquivo_exe_executavel_windows" "H:\\$@" | ZENITY_TITLE="$PROGNAME" function_zenity_running
+path_open=$1
+if [ "$path_open" == '' ]; then
+    path_open=$(cd ~/; pwd)
+else
+    if [ -f "$path_open" ]; then # Check if is a file
+        path_open=$(dirname "$path_open") # Remove file name
+    fi
+fi
+
+if echo "$path_open" |grep -q "/$"; then # Check if last character in the path is '/'
+    path_open=${path_open:0:-1} # Remove last character
+fi
+#echo -e "\n\npath_open: $path_open\n"; read _
+
+# "H:" # H - Home folder
+# "Z:\\$1" # Z - Full path
+
+__GL_SHADER_DISK_CACHE=0 __GL_SHADER_DISK_CACHE_PATH="$PROGDIR/" XDG_CACHE_HOME="$PROGDIR/" LD_LIBRARY_PATH="${HERE}/lib:${HERE}/lib64:/lib:/lib/i386-linux-gnu:/lib/x86_64-linux-gnu:/lib32:/lib64:/libx32:/usr/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib32:/usr/lib64:/usr/libx32:${LD_LIBRARY_PATH}" XDG_DATA_DIRS="${HERE}/share:${HERE}/usr/share:/usr/share:/usr/local/share:$HOME/.local/share:${XDG_DATA_DIRS}" PATH="${HERE}/bin:/usr/bin:/sbin:/usr/sbin:$PATH" FONTCONFIG_PATH="${HERE}/etc/fonts" DISPLAY="$DISPLAY" WINE_LARGE_ADDRESS_AWARE=1 NTFS_MODE=1 WINE64PRELOADER="${HERE}/bin/wine64-preloader" WINEPRELOADER="${HERE}/bin/wine-preloader" WINEPATH="${HERE}/bin/winepath" WINEDBG="${HERE}/bin/winedbg" WINECONSOLE="${HERE}/bin/wineconsole" WINECFG="${HERE}/bin/winecfg" WINEBOOT="${HERE}/bin/wineboot" WINESERVER="${HERE}/bin/wineserver" WINEESYNC=1 WINE64="${HERE}/bin/wine64" WINE="${HERE}/bin/wine" USE_SYSTEM_WINE=0 WINEDLLOVERRIDES="$Dlls_para_desabilitar=d;$Dlls_modo_build=b;$Dlls_nativas_sem_vulkan=n" WINEPREFIX="$PROGDIR" WINEARCH="$Arquitetura_do_windows" "${HERE}/bin/wine64" 'C:\\windows\\system32\\start.exe' /wait /b /d "$Diretorio_do_executavel_windows" "$Arquivo_exe_executavel_windows" "Z:\\$path_open" " | ZENITY_TITLE="$PROGNAME" function_zenity_running
