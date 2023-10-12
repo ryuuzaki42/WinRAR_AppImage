@@ -15,7 +15,6 @@ jobs:
     - name: Install fuse and libfuse2
       run: sudo apt install fuse libfuse2
 
-
     - name: appimagetool
       run: |
         set -x
@@ -28,14 +27,12 @@ jobs:
     - name: Make AppImage
       run: |
         set -x
-
         rm -rv .git/ .github/ .gitignore
 
         ## Aded key_crack
         wget https://raw.githubusercontent.com/Fonkelflare/winrar-rarreg.key/main/rarreg.key -O drive_c/WinRAR/rarreg.key
 
         cd ../
-
         ARCH=x86_64 ./appimagetool-x86_64.AppImage WinRAR_AppImage/
         pwd; ls -lah
 
@@ -49,9 +46,10 @@ jobs:
 
     - uses: xresloader/upload-to-github-release@main
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          file: "WinRAR*.AppImage; WinRAR*.md5"
-          release_id: ${{ steps.create_release.outputs.id }}
-          verbose: true
-          draft: false
+        file: "WinRAR*.AppImage; WinRAR*.md5"
+        release_id: ${{ steps.create_release.outputs.id }}
+        verbose: true
+        draft: false
+        default_release_name: "WinRAR v"
