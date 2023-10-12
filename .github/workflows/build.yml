@@ -29,7 +29,7 @@ jobs:
         set -x
         rm -rv .git/ .github/ .gitignore
 
-        ## Aded key_crack
+        ## Aded key / crack
         wget https://raw.githubusercontent.com/Fonkelflare/winrar-rarreg.key/main/rarreg.key -O drive_c/WinRAR/rarreg.key
 
         cd ../
