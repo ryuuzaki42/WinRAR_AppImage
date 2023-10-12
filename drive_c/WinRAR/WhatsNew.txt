@@ -1,6 +1,27 @@
                 WinRAR - What's new in the latest version
 
 
+   Version 6.24
+
+   1. Bugs fixed:
+
+      a) WinRAR and UnRAR.dll extraction command dereferenced a null pointer
+         and crashed when processing a zero length archive name
+         in the archive metadata stored with -am switch.
+
+         We are thankful to Radoslaw Madej from Check Point software
+         for reporting this issue;
+   
+      b) WinRAR and UnRAR.dll extraction command overwrote extracted file
+         data with contents of ::$DATA NTFS alternate data stream,
+         if such stream was present in the archive. In this case
+         unpacked data size and checksum could mismatch file size
+         and checksum displayed in WinRAR file list. It didn't affect
+         file name and type, which were displayed properly.
+
+         We are thankful to Ata Hakcil for reporting this issue.
+
+   
    Version 6.23
 
    1. Added extraction of XZ archives utilizing ARM64 filter.
