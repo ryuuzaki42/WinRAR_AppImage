@@ -1,5 +1,5 @@
 7zxa.dll
-Default.SFX
+Default32.SFX
 Descript.ion
 License.txt
 Order.htm
@@ -13,10 +13,10 @@ Uninstall.exe
 Uninstall.lst
 UnRAR.exe
 WhatsNew.txt
-WinCon.SFX
+WinCon32.SFX
 WinRAR.chm
 WinRAR.exe
-Zip.SFX
+Zip32.SFX
 rarlng.dll
 rarnew.dat
 zipnew.dat
@@ -27,9 +27,9 @@ sfx.lng
 uninstall.lng
 winrar.lng
 winrar.chw
-Default64.SFX
-Zip64.SFX
-WinCon64.SFX
+Default.SFX
+Zip.SFX
+WinCon.SFX
 RarExt32.dll
 RarExtInstaller.exe
 RarExtInstaller.exe.manifest
