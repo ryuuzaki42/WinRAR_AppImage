@@ -6,14 +6,13 @@ ZENITY_ICON_NAME=$(cat "$HERE/"*.desktop | grep -w -m1 'Icon' | cut -d '=' -f2)
 
 PROGNAME='WinRAR'
 ICON="$HERE/winrar.png"
-DIRETORIO_CONFIG="$HOME/.config/WinRAR_AppImage"
-PROGDIR="$DIRETORIO_CONFIG/$PROGNAME"
+PROGDIR="$HOME/.config/WinRAR_AppImage"
 
 Diretorio_do_executavel_windows='C:\\WinRAR\\'
 Arquivo_exe_executavel_windows='C:\\WinRAR\\WinRAR.exe'
 Arquitetura_do_windows="win64" # win32 para windows 32bits (i386) ou win64 para windows de 64bits
 Dlls_para_desabilitar="d3d12.dll,winemenubuilder.exe,winemine.exe,winedbg.exe,progman.exe,reg.exe,regsvr32.exe,robocopy.exe,taskmgr.exe,uninstaller.exe,winecfg.exe,control.exe,appwiz.cpl,inetcpl.cpl,mscoree,mshtml,atiadlxx,nvapi64,nvapi"
-mkdir -p "$DIRETORIO_CONFIG"
+mkdir -p "$PROGDIR"
 
 function function_zenity_running() {
     timeout 3 zenity --display="$DISPLAY" --width=400 --height=100 --progress --pulsate --no-cancel --title="$ZENITY_TITLE" --text="<span size=\"xx-large\">Running $PROGNAME</span>" --icon-name="$ZENITY_ICON_NAME" --window-icon="$ICON" --auto-close
