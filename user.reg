@@ -3,23 +3,6 @@ WINE REGISTRY Version 2
 
 #arch=win64
 
-[Control Panel\\Accessibility\\AudioDescription] 1665440338
-#time=1d8dcf64afdcb16
-"Locale"=dword:00000000
-"On"="0"
-
-[Control Panel\\Accessibility\\Blind Access] 1665440338
-#time=1d8dcf64afdc29c
-"On"="0"
-
-[Control Panel\\Accessibility\\Keyboard Preference] 1665440338
-#time=1d8dcf64afdb2ca
-"On"="1"
-
-[Control Panel\\Accessibility\\ShowSounds] 1665440338
-#time=1d8dcf64afdc4ea
-"On"="0"
-
 [Control Panel\\Colors] 1660367192
 #time=1d8aed2744b8e24
 
@@ -87,75 +70,10 @@ WINE REGISTRY Version 2
   00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
   00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 
-[Control Panel\\International] 1665440338
-#time=1d8dcf64ae3c608
-"iCalendarType"="1"
-"iCountry"="1"
-"iCurrDigits"="2"
-"iCurrency"="0"
-"iDate"="0"
-"iDigits"="2"
-"iFirstDayOfWeek"="6"
-"iFirstWeekOfYear"="0"
-"iLDate"="0"
-"iLZero"="1"
-"iMeasure"="1"
-"iNegCurr"="0"
-"iNegNumber"="1"
-"iPaperSize"="1"
-"iTime"="0"
-"iTimePrefix"="0"
-"iTLZero"="0"
-"Locale"="00000409"
-"LocaleName"="en-US"
-"Numshape"="1"
-"s1159"="AM"
-"s2359"="PM"
-"sCountry"="United States"
-"sCurrency"="$"
-"sDate"="/"
-"sDecimal"="."
-"sGrouping"="3;0"
-"sLanguage"="ENU"
-"sList"=","
-"sLongDate"="dddd, MMMM dd, yyyy"
-"sMonDecimalSep"="."
-"sMonGrouping"="3;0"
-"sMonThousandSep"=","
-"sNativeDigits"="0123456789"
-"sNegativeSign"="-"
-"sPositiveSign"=""
-"sShortDate"="M/d/yyyy"
-"sThousand"=","
-"sTime"=":"
-"sTimeFormat"="h:mm:ss tt"
-"sYearMonth"="MMMM, yyyy"
-
-[Control Panel\\International\\Geo] 1665440338
-#time=1d8dcf64ae3b3fc
-"Name"="US"
-"Nation"="244"
-
 [Control Panel\\Keyboard] 1660367192
 #time=1d8aed274182908
 "KeyboardDelay"="1"
 "KeyboardSpeed"="31"
-
-[Control Panel\\Mouse] 1665440338
-#time=1d8dcf64afdc6ac
-"ActiveWindowTracking"=dword:00000000
-"DoubleClickHeight"="4"
-"DoubleClickSpeed"="500"
-"DoubleClickWidth"="4"
-"MouseHoverHeight"="4"
-"MouseHoverTime"="400"
-"MouseHoverWidth"="4"
-"MouseSensitivity"="10"
-"MouseSpeed"="1"
-"MouseThreshold1"="6"
-"MouseThreshold2"="10"
-"SnapToDefaultButton"="0"
-"SwapMouseButtons"="0"
 
 [Control Panel\\Sound] 1660367192
 #time=1d8aed27417f4ce
@@ -163,55 +81,6 @@ WINE REGISTRY Version 2
 
 [Environment] 1660367191
 #time=1d8aed273f3c46e
-
-[Keyboard Layout\\Preload] 1665440338
-#time=1d8dcf64afd984e
-"1"="00000409"
-
-[Software\\Microsoft\\SystemCertificates\\CA\\Certificates] 1665440341
-#time=1d8dcf64ca1f082
-
-[Software\\Microsoft\\SystemCertificates\\CA\\CRLs] 1665440341
-#time=1d8dcf64ca1f578
-
-[Software\\Microsoft\\SystemCertificates\\CA\\CTLs] 1665440341
-#time=1d8dcf64ca1f79e
-
-[Software\\Microsoft\\SystemCertificates\\My\\Certificates] 1665440341
-#time=1d8dcf64ca20b1c
-
-[Software\\Microsoft\\SystemCertificates\\My\\CRLs] 1665440341
-#time=1d8dcf64ca20c84
-
-[Software\\Microsoft\\SystemCertificates\\My\\CTLs] 1665440341
-#time=1d8dcf64ca20dec
-
-[Software\\Microsoft\\SystemCertificates\\Root\\Certificates] 1665440341
-#time=1d8dcf64c9e8e7e
-
-[Software\\Microsoft\\SystemCertificates\\Root\\CRLs] 1665440341
-#time=1d8dcf64c9e92e8
-
-[Software\\Microsoft\\SystemCertificates\\Root\\CTLs] 1665440341
-#time=1d8dcf64c9e9824
-
-[Software\\Microsoft\\SystemCertificates\\Trust\\Certificates] 1665440341
-#time=1d8dcf64ca21670
-
-[Software\\Microsoft\\SystemCertificates\\Trust\\CRLs] 1665440341
-#time=1d8dcf64ca217ce
-
-[Software\\Microsoft\\SystemCertificates\\Trust\\CTLs] 1665440341
-#time=1d8dcf64ca2197c
-
-[Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders] 1665440339
-#time=1d8dcf64b862100
-
-[Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders] 1665440339
-#time=1d8dcf64b862268
-
-[Software\\Wine\\AppDefaults] 1665440338
-#time=1d8dcf64ae252f0
 
 [Software\\Wine\\Direct3D] 1660367206
 #time=1d8aed27c872396
@@ -224,13 +93,13 @@ WINE REGISTRY Version 2
 #time=1d8aed27c8714e6
 "Enable"="N"
 
-[Software\\Wine\\Fonts] 1677150795
-#time=1d94777d2fee946
-"Codepages"="1252,437"
+[Software\\Wine\\Fonts] 1660458309
+#time=1d8afa69a00470c
+"Codepages"="1252,850"
 "LogPixels"=dword:00000090
 
-[Software\\Wine\\Fonts\\External Fonts] 1677150795
-#time=1d94777d2ff3c2a
+[Software\\Wine\\Fonts\\External Fonts] 1660458309
+#time=1d8afa69a148140
 
 [Software\\WinRAR\\FileList\\FileColumnWidths] 1660367247
 #time=1d8aed294e60574
@@ -515,8 +384,8 @@ WINE REGISTRY Version 2
   00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
   00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 
-[Software\\WinRAR\\General] 1677150796
-#time=1d94777d3ddabe0
+[Software\\WinRAR\\General] 1660458360
+#time=1d8afa6b8945690
 "DlgHistory"=dword:00000001
 "History"=dword:00000001
 "LastFolder"="H:\\"
@@ -529,7 +398,7 @@ WINE REGISTRY Version 2
 "ShowComment"=dword:00000001
 "SMP"=dword:00000001
 "Sound"=dword:00000001
-"VerInfo"=hex:00,15,06,00,fa,36,dd,d3,77,47,d9,01
+"VerInfo"=hex:00,01,05,00,18,36,ed,87,d2,ae,d8,01
 "WizardMode"=dword:00000000
 
 [Software\\WinRAR\\General\\Toolbar] 1660458360
@@ -661,34 +530,30 @@ WINE REGISTRY Version 2
 "f.wiz.pos"=dword:00000007
 "f.wiz.sep"=dword:00000000
 
-[Software\\WinRAR\\General\\Toolbar\\Layout] 1665440344
-#time=1d8dcf64e89e7a6
-"Band76_0"=hex:4c,00,00,00,63,01,00,00,04,02,00,00,00,00,00,00,f0,f0,f0,00,00,\
-  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
-  00,00,00,00,00,00,53,00,00,00,34,03,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+[Software\\WinRAR\\General\\Toolbar\\Layout] 1660458381
+#time=1d8afa6c5297426
+"Band76_0"=hex:4c,00,00,00,73,01,00,00,04,02,00,00,00,00,00,00,f0,f0,f0,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,ca,00,10,00,00,00,\
+  00,00,00,00,00,00,53,00,00,00,48,03,00,00,00,00,00,00,00,00,00,00,00,00,00,\
   00,01,00,00,00
-"Band76_1"=hex:4c,00,00,00,63,01,00,00,05,00,00,00,00,00,00,00,f0,f0,f0,00,00,\
-  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+"Band76_1"=hex:4c,00,00,00,73,01,00,00,05,00,00,00,00,00,00,00,f0,f0,f0,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,cc,00,11,00,00,00,\
   00,00,00,00,00,00,1e,00,00,00,28,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
   00,02,00,00,00
-"Band76_2"=hex:4c,00,00,00,63,01,00,00,04,00,00,00,00,00,00,00,f0,f0,f0,00,00,\
-  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+"Band76_2"=hex:4c,00,00,00,73,01,00,00,04,00,00,00,00,00,00,00,f0,f0,f0,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,ba,00,03,00,00,00,\
   00,00,00,00,00,00,1e,00,00,00,64,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
   00,03,00,00,00
 
-[Software\\WinRAR\\Interface] 1665440340
-#time=1d8dcf64bfd7e12
+[Software\\WinRAR\\Interface] 1660458360
+#time=1d8afa6b8850474
 "SystemProgressBar"=dword:00000000
 "TaskbarProgressBar"=dword:00000001
 
-[Software\\WinRAR\\Interface\\MainWin] 1665441003
-#time=1d8dcf7d7264446
-"Placement"=hex:2c,00,00,00,00,00,00,00,03,00,00,00,ff,ff,ff,ff,ff,ff,ff,ff,ff,\
-  ff,ff,ff,ff,ff,ff,ff,3e,01,00,00,3d,00,00,00,85,04,00,00,a7,02,00,00
-
-[Software\\WinRAR\\Interface\\Misc] 1665440340
-#time=1d8dcf64bfd7f02
-"RemShown"=dword:00000001
+[Software\\WinRAR\\Interface\\MainWin] 1660458381
+#time=1d8afa6c52758da
+"Placement"=hex:2c,00,00,00,00,00,00,00,01,00,00,00,ff,ff,ff,ff,ff,ff,ff,ff,ff,\
+  ff,ff,ff,ff,ff,ff,ff,00,00,00,00,a4,00,00,00,47,03,00,00,0e,03,00,00
 
 [Software\\WinRAR\\Interface\\Themes] 1660367225
 #time=1d8aed287f52886
@@ -1088,16 +953,6 @@ WINE REGISTRY Version 2
 "WaitForOther"=dword:00000000
 "WipeIfPassword"=dword:00000000
 
-[Volatile Environment] 1677150796
-#time=1d94777d3b6289a
-"APPDATA"="C:\\users\\j\\AppData\\Roaming"
-"CLIENTNAME"="Console"
-"HOMEDRIVE"="C:"
-"HOMEPATH"="\\users\\j"
-"HOMESHARE"=""
-"LOCALAPPDATA"="C:\\users\\j\\AppData\\Local"
-"LOGONSERVER"="\\\\WOSNIAK"
-"SESSIONNAME"="Console"
-"USERDOMAIN"="WOSNIAK"
-"USERNAME"="j"
-"USERPROFILE"="C:\\users\\j"
+[Volatile Environment] 1660458156
+#time=1d8afa63eef96ec
+
