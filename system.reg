@@ -35121,36 +35121,6 @@ WINE REGISTRY Version 2
   ac,6c,08,ef,d6,cb,81,86,53,36,a8,a0,02,de,31,47,56,db,65,f1,7e,3a,c8,69,5b,\
   69,ab,34,3e,48,a3
 
-[Software\\Microsoft\\SystemCertificates\\CA\\CRLs] 1665440341
-#time=1d8dcf64ca20694
-
-[Software\\Microsoft\\SystemCertificates\\CA\\CTLs] 1665440341
-#time=1d8dcf64ca207e8
-
-[Software\\Microsoft\\SystemCertificates\\My\\Certificates] 1665440341
-#time=1d8dcf64ca210bc
-
-[Software\\Microsoft\\SystemCertificates\\My\\CRLs] 1665440341
-#time=1d8dcf64ca21224
-
-[Software\\Microsoft\\SystemCertificates\\My\\CTLs] 1665440341
-#time=1d8dcf64ca2138c
-
-[Software\\Microsoft\\SystemCertificates\\Root\\CRLs] 1665440341
-#time=1d8dcf64cb84c7e
-
-[Software\\Microsoft\\SystemCertificates\\Root\\CTLs] 1665440341
-#time=1d8dcf64cb84db4
-
-[Software\\Microsoft\\SystemCertificates\\Trust\\Certificates] 1665440341
-#time=1d8dcf64ca21d00
-
-[Software\\Microsoft\\SystemCertificates\\Trust\\CRLs] 1665440341
-#time=1d8dcf64ca21e68
-
-[Software\\Microsoft\\SystemCertificates\\Trust\\CTLs] 1665440341
-#time=1d8dcf64ca21fbc
-
 [Software\\Microsoft\\TermServLicensing] 1660360139
 #time=1d8aec20864e314
 
@@ -35161,12 +35131,12 @@ WINE REGISTRY Version 2
 #time=1d8aec20864ea30
 "Installation Directory"="C:\\windows\\system32\\wbem"
 
-[Software\\Microsoft\\Windows\\CurrentVersion] 1677150794
-#time=1d94777d2f0ca50
+[Software\\Microsoft\\Windows\\CurrentVersion] 1660362459
+#time=1d8aec76f4c8a50
 "CommonFilesDir"="C:\\Program Files\\Common Files"
 "CommonFilesDir (x86)"="C:\\Program Files (x86)\\Common Files"
 "FirstInstallDateTime"=hex:21,81,7c,23
-"ProductId"="12345-OEM-1510842-00762"
+"ProductId"="12345-OEM-8140726-00501"
 "ProgramFilesDir"="C:\\Program Files"
 "ProgramFilesDir (x86)"="C:\\Program Files (x86)"
 "ProgramFilesPath"=str(2):"%ProgramFiles%"
@@ -35942,8 +35912,8 @@ WINE REGISTRY Version 2
 [Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders] 1660360136
 #time=1d8aec2067bd404
 
-[Software\\Microsoft\\Windows\\CurrentVersion\\Fonts] 1677150795
-#time=1d94777d2ff3b6c
+[Software\\Microsoft\\Windows\\CurrentVersion\\Fonts] 1660458309
+#time=1d8afa69a147ee8
 "Courier"="coure.fon"
 "MS Sans Serif"="sseriff.fon"
 "MS Serif"="serife.fon"
@@ -36067,8 +36037,8 @@ WINE REGISTRY Version 2
 #time=1d8aec20864ee90
 "MAPI"="1"
 
-[Software\\Microsoft\\Windows NT\\CurrentVersion] 1677150795
-#time=1d94777d33ddd9a
+[Software\\Microsoft\\Windows NT\\CurrentVersion] 1660458309
+#time=1d8afa69a8827c6
 "CSDVersion"="Service Pack 1"
 "CurrentBuild"="7601"
 "CurrentBuildNumber"="7601"
@@ -36085,7 +36055,7 @@ WINE REGISTRY Version 2
   00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 "DisplayVersion"="21H1"
 "InstallDate"=dword:4be5019a
-"ProductId"="12345-OEM-1510842-00762"
+"ProductId"="12345-OEM-8140726-00501"
 "ProductName"="Microsoft Windows 7"
 "RegisteredOrganization"=""
 "RegisteredOwner"=""
@@ -36115,8 +36085,8 @@ WINE REGISTRY Version 2
 [Software\\Microsoft\\Windows NT\\CurrentVersion\\FontMapper] 1660360139
 #time=1d8aec2085f3306
 
-[Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts] 1677150795
-#time=1d94777d2ff3bd0
+[Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts] 1660458309
+#time=1d8afa69a148014
 "Andale Mono (TrueType)"="andalemo.ttf"
 "Arial Black (TrueType)"="AriBlk.TTF"
 "Arial Bold (TrueType)"="Arialbd.TTF"
@@ -36267,10 +36237,10 @@ WINE REGISTRY Version 2
 "ProgramData"=str(2):"C:\\ProgramData"
 "Public"=str(2):"C:\\users\\Public"
 
-[Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-0-0-0-1000] 1665440339
-#time=1d8dcf64baa7258
+[Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-0-0-0-1000] 1660366517
+#time=1d8aed0e1bac4c2
 "Flags"=dword:00000000
-"ProfileImagePath"="C:\\users\\j"
+"ProfileImagePath"="C:\\users\\"
 
 [Software\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones] 1660365143
 #time=1d8aecdaec290c0
@@ -36426,53 +36396,36 @@ WINE REGISTRY Version 2
 @="Disk drives"
 "Class"="DiskDrive"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}] 1677150795
-#time=1d94777d38bef12
+[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}] 1660458310
+#time=1d8afa69b034e60
 "Class"="Display"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000] 1677150795
-#time=1d94777d38b832e
-"DriverDate"="2-23-2023"
-"DriverDateData"=hex:6a,46,8b,d3,77,47,d9,01
-"DriverDesc"="Intel(R) UHD Graphics 620 (KBL GT2)"
-"HardwareInformation.AdapterString"=hex:49,00,6e,00,74,00,65,00,6c,00,28,00,52,\
-  00,29,00,20,00,55,00,48,00,44,00,20,00,47,00,72,00,61,00,70,00,68,00,69,00,\
-  63,00,73,00,20,00,36,00,32,00,30,00,20,00,28,00,4b,00,42,00,4c,00,20,00,47,\
-  00,54,00,32,00,29,00,00,00
-"HardwareInformation.BiosString"=hex:49,00,6e,00,74,00,65,00,6c,00,28,00,52,00,\
-  29,00,20,00,55,00,48,00,44,00,20,00,47,00,72,00,61,00,70,00,68,00,69,00,63,\
-  00,73,00,20,00,36,00,32,00,30,00,20,00,28,00,4b,00,42,00,4c,00,20,00,47,00,\
-  54,00,32,00,29,00,00,00
-"HardwareInformation.ChipType"=hex:49,00,6e,00,74,00,65,00,6c,00,28,00,52,00,\
-  29,00,20,00,55,00,48,00,44,00,20,00,47,00,72,00,61,00,70,00,68,00,69,00,63,\
-  00,73,00,20,00,36,00,32,00,30,00,20,00,28,00,4b,00,42,00,4c,00,20,00,47,00,\
-  54,00,32,00,29,00,00,00
-"HardwareInformation.DacType"=hex:49,00,6e,00,74,00,65,00,72,00,67,00,72,00,61,\
-  00,74,00,65,00,64,00,20,00,52,00,41,00,4d,00,44,00,41,00,43,00,00,00
+[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000] 1660458310
+#time=1d8afa69b029a60
+"DriverDate"="8-14-2022"
+"DriverDateData"=hex:d2,94,02,9b,a6,af,d8,01
+"DriverDesc"=""
+"HardwareInformation.AdapterString"
+"HardwareInformation.BiosString"
+"HardwareInformation.ChipType"
+"HardwareInformation.DacType"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0001] 1677150795
-#time=1d94777d38bf1e2
-"DriverDate"="2-23-2023"
-"DriverDateData"=hex:9a,bb,8b,d3,77,47,d9,01
-"DriverDesc"="NVIDIA-G0"
-"HardwareInformation.AdapterString"=hex:4e,00,56,00,49,00,44,00,49,00,41,00,2d,\
-  00,47,00,30,00,00,00
-"HardwareInformation.BiosString"=hex:4e,00,56,00,49,00,44,00,49,00,41,00,2d,00,\
-  47,00,30,00,00,00
-"HardwareInformation.ChipType"=hex:4e,00,56,00,49,00,44,00,49,00,41,00,2d,00,\
-  47,00,30,00,00,00
-"HardwareInformation.DacType"=hex:49,00,6e,00,74,00,65,00,72,00,67,00,72,00,61,\
-  00,74,00,65,00,64,00,20,00,52,00,41,00,4d,00,44,00,41,00,43,00,00,00
+[System\\CurrentControlSet\\Control\\Class\\{4D36E968-E325-11CE-BFC1-08002BE10318}\\0001] 1660458310
+#time=1d8afa69b0353c4
+"DriverDate"="8-14-2022"
+"DriverDateData"=hex:f0,4e,03,9b,a6,af,d8,01
+"DriverDesc"=""
+"HardwareInformation.AdapterString"
+"HardwareInformation.BiosString"
+"HardwareInformation.ChipType"
+"HardwareInformation.DacType"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}] 1677150795
-#time=1d94777d38be67a
+[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}] 1660458310
+#time=1d8afa69b033e20
 "Class"="Monitor"
 
-[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0000] 1677150795
-#time=1d94777d38bcabe
-
-[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0001] 1677150795
-#time=1d94777d38be67a
+[System\\CurrentControlSet\\Control\\Class\\{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0000] 1660458310
+#time=1d8afa69b033e20
 
 [System\\CurrentControlSet\\Control\\Class\\{4d36e978-e325-11ce-bfc1-08002be10318}] 1660360139
 #time=1d8aec2085e5c6a
@@ -36519,9 +36472,9 @@ WINE REGISTRY Version 2
 "InfPath"="input.inf"
 "InfSection"="device_section"
 
-[System\\CurrentControlSet\\Control\\ComputerName\\ComputerName] 1677150794
-#time=1d94777d2f10466
-"ComputerName"="WOSNIAK"
+[System\\CurrentControlSet\\Control\\ComputerName\\ComputerName] 1660458151
+#time=1d8afa63bec7348
+"ComputerName"=""
 
 [System\\CurrentControlSet\\Control\\ContentIndex\\Language\\Neutral] 1660360139
 #time=1d8aec2085e4414
@@ -36529,69 +36482,57 @@ WINE REGISTRY Version 2
 "StemmerClass"=""
 "WBreakerClass"="{369647e0-17b0-11ce-9950-00aa004bbb1f}"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000001#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1677150795
-#time=1d94777d38bf6a6
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000001#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1660458310
+#time=1d8afa69b035cfc
 "DeviceInstance"="PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_8086&DEV_5916&SUBSYS_00000000&REV_00#00000000#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1665440997
-#time=1d8dcf7d3f443a4
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_8086&DEV_5916&SUBSYS_00000000&REV_00#00000000#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1660458310
+#time=1d8afa69b02a60e
 "DeviceInstance"="PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000"
-
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}\\##?#PCI#VEN_8086&DEV_5917&SUBSYS_00000000&REV_00#00000000#{1CA05180-A699-450A-9A0C-DE4FBE3DDD89}] 1677150795
-#time=1d94777d38b8b94
-"DeviceInstance"="PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{378DE44C-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}] 1660360145
 #time=1d8aec20bf7ed32
 "DeviceInstance"="HID\\VID_845E&PID_0001\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{378DE44C-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}\\#] 1677150795
-#time=1d94777d30012b2
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{378DE44C-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}\\#] 1660458309
+#time=1d8afa69a16971e
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0001#0&0000&0&0#{378de44c-56ef-11d1-bc8c-00a0c91405dd}"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}] 1660360145
 #time=1d8aec20bf7c168
 "DeviceInstance"="HID\\VID_845E&PID_0001\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1677150795
-#time=1d94777d3000a10
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1660458309
+#time=1d8afa69a167d1a
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0001#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}] 1660360145
 #time=1d8aec20c04d43e
 "DeviceInstance"="HID\\VID_845E&PID_0002\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1677150795
-#time=1d94777d300ddbe
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{4D1E55B2-F16F-11CF-88CB-001111000030}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}\\#] 1660458309
+#time=1d8afa69a1861a2
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0002#0&0000&0&0#{4d1e55b2-f16f-11cf-88cb-001111000030}"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000001#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1677150795
-#time=1d94777d38bf37c
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_0000&DEV_0000&SUBSYS_00000000&REV_00#00000001#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1660458310
+#time=1d8afa69b0356e4
 "DeviceInstance"="PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_8086&DEV_5916&SUBSYS_00000000&REV_00#00000000#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1665440997
-#time=1d8dcf7d3f4402a
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_8086&DEV_5916&SUBSYS_00000000&REV_00#00000000#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1660458310
+#time=1d8afa69b029eca
 "DeviceInstance"="PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000"
-
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{5B45201D-F2F2-4F3B-85BB-30FF1F953599}\\##?#PCI#VEN_8086&DEV_5917&SUBSYS_00000000&REV_00#00000000#{5B45201D-F2F2-4F3B-85BB-30FF1F953599}] 1677150795
-#time=1d94777d38b86ee
-"DeviceInstance"="PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000"
 
 [System\\CurrentControlSet\\Control\\DeviceClasses\\{884B96C3-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}] 1660360145
 #time=1d8aec20c05024c
 "DeviceInstance"="HID\\VID_845E&PID_0002\\0&0000&0&0"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{884B96C3-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}\\#] 1677150795
-#time=1d94777d300e4f8
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{884B96C3-56EF-11D1-BC8C-00A0C91405DD}\\##?#hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}\\#] 1660458309
+#time=1d8afa69a18750c
 "SymbolicLink"="\\\\?\\hid#vid_845e&pid_0002#0&0000&0&0#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
 
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}\\##?#DISPLAY#Default_Monitor#0000&0000#{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}] 1677150795
-#time=1d94777d38bb3a8
+[System\\CurrentControlSet\\Control\\DeviceClasses\\{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}\\##?#DISPLAY#Default_Monitor#0000&0000#{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}] 1660458310
+#time=1d8afa69b031c06
 "DeviceInstance"="DISPLAY\\Default_Monitor\\0000&0000"
-
-[System\\CurrentControlSet\\Control\\DeviceClasses\\{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}\\##?#DISPLAY#Default_Monitor#0001&0000#{E6F07B5F-EE97-4A90-B076-33F57BF4EAA7}] 1677150795
-#time=1d94777d38bd4f0
-"DeviceInstance"="DISPLAY\\Default_Monitor\\0001&0000"
 
 [System\\CurrentControlSet\\Control\\hivelist] 1660360139
 #time=1d8aec20864f55c
@@ -36606,8 +36547,8 @@ WINE REGISTRY Version 2
 [System\\CurrentControlSet\\Control\\Lsa\\MSV1_0] 1660360139
 #time=1d8aec20864ff16
 
-[System\\CurrentControlSet\\Control\\Nls\\Codepage] 1665440338
-#time=1d8dcf64ae3c78e
+[System\\CurrentControlSet\\Control\\Nls\\Codepage] 1660360134
+#time=1d8aec2052c123a
 "10000"="c_10000.nls"
 "10001"="c_10001.nls"
 "10002"="c_10002.nls"
@@ -36678,7 +36619,7 @@ WINE REGISTRY Version 2
 "950"="c_950.nls"
 "ACP"="1252"
 "MACCP"="10000"
-"OEMCP"="437"
+"OEMCP"="850"
 
 [System\\CurrentControlSet\\Control\\Nls\\Language] 1660360139
 #time=1d8aec20867a98c
@@ -37167,17 +37108,17 @@ WINE REGISTRY Version 2
 "HeapSegmentCommit"=dword:00000000
 "HeapSegmentReserve"=dword:00000000
 
-[System\\CurrentControlSet\\Control\\Session Manager\\Environment] 1677150794
-#time=1d94777d2f0f034
+[System\\CurrentControlSet\\Control\\Session Manager\\Environment] 1660458151
+#time=1d8afa63bec530e
 "ComSpec"=str(2):"%SystemRoot%\\system32\\cmd.exe"
-"NUMBER_OF_PROCESSORS"="8"
+"NUMBER_OF_PROCESSORS"=""
 "OS"="Windows_NT"
 "PATH"=str(2):"%SystemRoot%\\system32;%SystemRoot%;%SystemRoot%\\system32\\wbem;%SystemRoot%\\system32\\WindowsPowershell\\v1.0"
 "PATHEXT"=".com;.exe;.bat;.cmd;.vbs;.vbe;.js;.jse;.wsf;.wsh"
 "PROCESSOR_ARCHITECTURE"="AMD64"
-"PROCESSOR_IDENTIFIER"="Intel64 Family 6 Model 142 Stepping 10, GenuineIntel"
+"PROCESSOR_IDENTIFIER"=""
 "PROCESSOR_LEVEL"="6"
-"PROCESSOR_REVISION"="8e0a"
+"PROCESSOR_REVISION"="8e09"
 "TEMP"=str(2):"Z\\tmp"
 "TMP"=str(2):"Z\\tmp"
 "windir"=str(2):"%SystemRoot%"
@@ -37203,94 +37144,47 @@ WINE REGISTRY Version 2
 #time=1d8aec3f192e3d2
 "CSDVersion"=dword:00000100
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000] 1677150796
-#time=1d94777d38c6a6e
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000] 1660458310
+#time=1d8afa69b03ece4
 "Class"="Monitor"
 "ClassGUID"="{4D36E96E-E325-11CE-BFC1-08002BE10318}"
 "DeviceDesc"="Generic Non-PnP Monitor"
 "Driver"="{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0000"
 "HardwareID"=str(7):"MONITOR\\Default_Monitor\0"
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Device Parameters] 1677150795
-#time=1d94777d38bb95c
-"EDID"=hex:00,ff,ff,ff,ff,ff,ff,00,4d,d9,02,77,01,01,01,01,01,16,01,03,80,47,\
-  28,78,0a,0d,c9,a0,57,47,98,27,12,48,4c,21,08,00,81,80,01,01,01,01,01,01,01,\
-  01,01,01,01,01,01,01,02,3a,80,18,71,38,2d,40,58,2c,45,00,c4,8e,21,00,00,1e,\
-  01,1d,00,72,51,d0,1e,20,6e,28,55,00,c4,8e,21,00,00,1e,00,00,00,fc,00,53,4f,\
-  4e,59,20,54,56,0a,20,20,20,20,20,00,00,00,fd,00,30,3e,0e,46,0f,00,0a,20,20,\
-  20,20,20,20,01,25,02,03,2f,f0,53,1f,10,14,05,13,04,20,22,3c,3e,12,16,03,07,\
-  11,15,02,06,01,26,09,07,07,15,07,50,83,01,00,00,68,03,0c,00,10,00,b8,2d,0f,\
-  e2,00,fb,02,3a,80,d0,72,38,2d,40,10,2c,45,80,c4,8e,21,00,00,1e,01,1d,00,bc,\
-  52,d0,1e,20,b8,28,55,40,c4,8e,21,00,00,1e,01,1d,80,18,71,1c,16,20,58,2c,25,\
-  00,c4,8e,21,00,00,9e,01,1d,80,d0,72,1c,16,20,10,2c,25,80,c4,8e,21,00,00,9e,\
-  00,00,00,00,00,00,00,00,bc
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Device Parameters] 1660458310
+#time=1d8afa69b032548
+"EDID"=hex:00,ff,ff,ff,ff,ff,ff,00,09,e5,b9,06,00,00,00,00,01,1a,01,04,95,22,\
+  13,78,02,3d,78,99,5b,54,91,27,22,4e,53,00,00,00,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,01,3c,37,80,de,70,38,14,40,30,20,36,00,58,c2,10,00,00,1a,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,fe,00,42,4f,\
+  45,20,48,46,0a,20,20,20,20,20,20,00,00,00,fe,00,4e,56,31,35,36,46,48,4d,2d,\
+  4e,34,36,0a,00,82
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0002] 1677150795
-#time=1d94777d38bbf1a
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0002] 1660458310
+#time=1d8afa69b032c1e
 @=hex(ffff0007):03,00,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0003] 1677150795
-#time=1d94777d38bc122
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0003] 1660458310
+#time=1d8afa69b032e6c
 @=hex(ffff1003):00,00,00,00,00,00,00,00,80,07,00,00,38,04,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0004] 1677150795
-#time=1d94777d38bc334
-@=hex(ffff1003):00,00,00,00,00,00,00,00,80,07,00,00,20,04,00,00
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0004] 1660458310
+#time=1d8afa69b0330ba
+@=hex(ffff1003):00,00,00,00,00,00,00,00,80,07,00,00,0f,04,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0005] 1677150795
-#time=1d94777d38bc492
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0005] 1660458310
+#time=1d8afa69b033308
 @=hex(ffff0012):5c,00,5c,00,2e,00,5c,00,44,00,49,00,53,00,50,00,4c,00,41,00,59,\
   00,31,00,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0001] 1677150795
-#time=1d94777d38bc848
-@=hex(ffff0008):f2,03,00,00,00,00,00,00
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0001] 1660458310
+#time=1d8afa69b033948
+@=hex(ffff0008):ef,03,00,00,00,00,00,00
 
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0002] 1677150795
-#time=1d94777d38bc97e
+[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0000&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0002] 1660458310
+#time=1d8afa69b033bd2
 @=hex(ffff0007):00,00,00,00
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000] 1677150796
-#time=1d94777d38c70cc
-"Class"="Monitor"
-"ClassGUID"="{4D36E96E-E325-11CE-BFC1-08002BE10318}"
-"DeviceDesc"="Generic Non-PnP Monitor"
-"Driver"="{4D36E96E-E325-11CE-BFC1-08002BE10318}\\0001"
-"HardwareID"=str(7):"MONITOR\\Default_Monitor\0"
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Device Parameters] 1677150795
-#time=1d94777d38bd9d2
-"EDID"=hex:00,ff,ff,ff,ff,ff,ff,00,4c,83,51,4e,00,00,00,00,00,18,01,04,90,22,\
-  13,78,0a,36,25,93,56,55,93,29,1d,50,54,00,00,00,01,01,01,01,01,01,01,01,01,\
-  01,01,01,01,01,01,01,28,1e,56,fa,50,00,18,30,40,30,25,00,58,c2,10,00,00,19,\
-  1f,14,56,04,51,00,18,30,40,30,25,00,58,c2,10,00,00,19,00,00,00,00,00,00,00,\
-  00,00,00,00,00,00,00,00,00,00,00,00,00,00,02,00,0c,4c,ff,0a,3c,64,14,15,24,\
-  64,00,00,00,00,56
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0002] 1677150795
-#time=1d94777d38bdd56
-@=hex(ffff0007):02,00,00,00
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0003] 1677150795
-#time=1d94777d38bde8c
-@=hex(ffff1003):00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0004] 1677150795
-#time=1d94777d38bdfb8
-@=hex(ffff1003):00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Properties\\{233a9ef3-afc4-4abd-b564-c32f21f1535b}\\0005] 1677150795
-#time=1d94777d38be0e4
-@=hex(ffff0012):5c,00,5c,00,2e,00,5c,00,44,00,49,00,53,00,50,00,4c,00,41,00,59,\
-  00,32,00,00,00
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0001] 1677150795
-#time=1d94777d38be40e
-@=hex(ffff0008):f2,03,00,00,00,00,00,00
-
-[System\\CurrentControlSet\\Enum\\DISPLAY\\Default_Monitor\\0001&0000\\Properties\\{CA085853-16CE-48AA-B114-DE9C72334223}\\0002] 1677150795
-#time=1d94777d38be53a
-@=hex(ffff0007):01,00,00,00
 
 [System\\CurrentControlSet\\Enum\\HID\\VID_845E&PID_0001\\0&0000&0&0] 1660360145
 #time=1d8aec20bfb166a
@@ -37324,11 +37218,11 @@ WINE REGISTRY Version 2
 #time=1d8aec20c05e95a
 @=hex(ffff0007):02,00,00,00
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001] 1665440339
-#time=1d8dcf64b7f6dc4
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001] 1660458155
+#time=1d8afa63ea6791c
 "Class"="Display"
 "ClassGUID"="{4D36E968-E325-11CE-BFC1-08002BE10318}"
-"DeviceDesc"="NVIDIA-G0"
+"DeviceDesc"=""
 "Driver"="{4D36E968-E325-11CE-BFC1-08002BE10318}\\0001"
 "HardwareID"=str(7):"PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\0"
 
@@ -37340,40 +37234,37 @@ WINE REGISTRY Version 2
 #time=1d8aec203d9026c
 @=hex(ffff000d):00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001\\Properties\\{540B947E-8B40-45BC-A8A2-6A0B894CBDA2}\\0005] 1677150795
-#time=1d94777d38becb0
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001\\Properties\\{540B947E-8B40-45BC-A8A2-6A0B894CBDA2}\\0005] 1660458310
+#time=1d8afa69b0349d8
 @=hex(ffff0011):01,00,00,00
 
 [System\\CurrentControlSet\\Enum\\PCI\\VEN_0000&DEV_0000&SUBSYS_00000000&REV_00\\00000001\\Properties\\{60B193CB-5276-4D0F-96FC-F173ABAD3EC6}\\0002] 1660360131
 #time=1d8aec203d90fa0
 @=hex(ffff0009):f0,03,00,00,00,00,00,00
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00] 1677150795
-#time=1d94777d38c187a
-
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000] 1677150795
-#time=1d94777d38b762c
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000] 1660458155
+#time=1d8afa63ea5a8a2
 "Class"="Display"
 "ClassGUID"="{4D36E968-E325-11CE-BFC1-08002BE10318}"
-"DeviceDesc"="Intel(R) UHD Graphics 620 (KBL GT2)"
+"DeviceDesc"=""
 "Driver"="{4D36E968-E325-11CE-BFC1-08002BE10318}\\0000"
-"HardwareID"=str(7):"PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\0"
+"HardwareID"=str(7):"PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\0"
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000\\Device Parameters] 1677150795
-#time=1d94777d38b74f6
-"VideoID"="{fa7531a7-0852-4bea-848d-ea0d3b1c7315}"
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000\\Device Parameters] 1660360131
+#time=1d8aec203d81fd2
+"VideoID"="{e96980bb-b26b-41fe-b3fc-f7fbc00a7580}"
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000\\Properties\\{233A9EF3-AFC4-4ABD-B564-C32F21F1535C}\\0002] 1677150795
-#time=1d94777d38b782a
-@=hex(ffff000d):6f,ed,32,b4,f8,11,37,a0,a9,43,c3,8b,9a,77,e3,80
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000\\Properties\\{233A9EF3-AFC4-4ABD-B564-C32F21F1535C}\\0002] 1660360131
+#time=1d8aec203d8289c
+@=hex(ffff000d):65,88,f4,1d,5c,e8,51,59,ba,fd,03,c6,9b,74,8e,f9
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000\\Properties\\{540B947E-8B40-45BC-A8A2-6A0B894CBDA2}\\0005] 1677150795
-#time=1d94777d38b7b4a
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000\\Properties\\{540B947E-8B40-45BC-A8A2-6A0B894CBDA2}\\0005] 1660458310
+#time=1d8afa69b028eda
 @=hex(ffff0011):01,00,00,00
 
-[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5917&SUBSYS_00000000&REV_00\\00000000\\Properties\\{60B193CB-5276-4D0F-96FC-F173ABAD3EC6}\\0002] 1677150795
-#time=1d94777d38b7f28
-@=hex(ffff0009):f2,03,00,00,00,00,00,00
+[System\\CurrentControlSet\\Enum\\PCI\\VEN_8086&DEV_5916&SUBSYS_00000000&REV_00\\00000000\\Properties\\{60B193CB-5276-4D0F-96FC-F173ABAD3EC6}\\0002] 1660360131
+#time=1d8aec203d83c74
+@=hex(ffff0009):ef,03,00,00,00,00,00,00
 
 [System\\CurrentControlSet\\Enum\\ROOT\\WINE\\WINEBUS] 1660360145
 #time=1d8aec20bdd2344
@@ -37422,12 +37313,12 @@ WINE REGISTRY Version 2
 [System\\CurrentControlSet\\Enum\\WINEBUS\\VID_845E&PID_0002\\0&0000&0&0\\Device Parameters] 1660360145
 #time=1d8aec20bfe1392
 
-[System\\CurrentControlSet\\Hardware Profiles\\Current\\Software\\Fonts] 1665440338
-#time=1d8dcf64afa50a8
+[System\\CurrentControlSet\\Hardware Profiles\\Current\\Software\\Fonts] 1660360139
+#time=1d8aec208612288
 "FIXEDFON.FON"="vgafix.fon"
 "FONTS.FON"="vgasys.fon"
 "LogPixels"=dword:00000060
-"OEMFONT.FON"="vgaoem.fon"
+"OEMFONT.FON"="vga850.fon"
 
 [System\\CurrentControlSet\\Services\\BITS\\Parameters] 1660360139
 #time=1d8aec208a58860
@@ -37572,11 +37463,11 @@ WINE REGISTRY Version 2
 #time=1d8aec208b0223e
 "ServiceDll"="C:\\windows\\system32\\wiaservc.dll"
 
-[System\\CurrentControlSet\\Services\\Tcpip\\Parameters] 1677150794
-#time=1d94777d2f10290
+[System\\CurrentControlSet\\Services\\Tcpip\\Parameters] 1660458151
+#time=1d8afa63bec6bf0
 "DataBasePath"="C:\\windows\\system32\\drivers\\etc"
-"Domain"="eniak"
-"Hostname"="wosniak"
+"Domain"=""
+"Hostname"=""
 
 [System\\CurrentControlSet\\Services\\TermService] 1660360140
 #time=1d8aec208b0838c
