@@ -40,6 +40,7 @@ jobs:
     - name: Rename AppImage and generate MD5
       run: |
         set -x
+        cd ../
 
         fileName=$(ls WinRAR*.AppImage)
         echo "fileName: $fileName"
