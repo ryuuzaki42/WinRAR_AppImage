@@ -1,6 +1,37 @@
                 WinRAR - What's new in the latest version
 
 
+   Version 7.01
+
+   1. Bugs fixed:
+
+      a) updating an encrypted file in a solid RAR archive produced
+         a corrupt archive if updated file was the first in archive,
+         no password was specified when starting updating and file name
+         encryption in the updated archive wasn't enabled;
+
+      b) WinRAR 7.00 crashed after switching to "Flat folders view" mode
+         from archive subfolder;
+
+      c) switch -ep4 duplicated the specified path instead of excluding it
+         when extracting;
+
+      d) if archive created by Unix RAR version contained symlinks with
+         path separator characters in target paths, these characters could be
+         broken when modifying such archive with Windows RAR;
+
+      e) invalid file name was displayed in file rename and file execute
+         WinRAR error messages;
+
+      f) SFX "Shortcut" command failed to recognize empty parameters
+         defined like "Shortcut=D,"",folder", while correctly recognizing
+         such parameters without quote marks like "Shortcut=D,,folder";
+
+      g) volume reconstruction didn't work in WinRAR.exe if "rc" command
+         was specified with .rev file, such as "WinRAR rc arc.part1.rev".
+         Unlike RAR, WinRAR required to use only .rar file name here.
+
+
    Version 7.00
 
    1. Compression dictionary sizes larger than 1 GB are supported
