@@ -57,7 +57,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "WinRAR*.AppImage; WinRAR*.md5"
+        file: "WinRAR*.AppImage; WinRAR*.zsync; WinRAR*.md5"
         release_id: ${{ steps.create_release.outputs.id }}
         verbose: true
         draft: false
