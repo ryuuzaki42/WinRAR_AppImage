@@ -1,6 +1,6 @@
                              User's Manual
                              ~~~~~~~~~~~~~
-                        RAR 7.01 console version
+                        RAR 7.10 console version
                         ~~~~~~~~~~~~~~~~~~~~~~~~
 
                        =-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -61,12 +61,12 @@
  ~~~~~~~~~~~~~~~~~~~~
 
     Default parameters may be added to the RAR command line by establishing
-    an environment variable "RAR".
+    an environment variable "RARINISWITCHES".
 
     For instance, in Unix following lines may be added to your profile:
 
-      RAR='-s -md1024'
-      export RAR
+      RARINISWITCHES='-s -md1024'
+      export RARINISWITCHES
 
     RAR will use this string as default parameters in the command line and
     will create "solid" archives with 1024 MB sliding dictionary size.
@@ -74,7 +74,7 @@
     RAR handles options with priority as following:
 
        command line switches                   highest priority
-       switches in the RAR variable            lower priority
+       switches in the RARINISWITCHES variable lower priority
        switches saved in configuration file    lowest priority
 
 
@@ -767,10 +767,10 @@
             If the first character in the format string is 'F', the rest of
             string specifies the default format string for -ag switch.
             Such -agf<default_format> switch has a practical value only
-            if placed to rar.ini configuration file or RAR environment
-            variable. For example, if we set RAR environment variable to
-            -agfYYYY-MMM-DD, we can use -ag without a parameter with 
-            YYYY-MMM-DD format string assumed.
+            if placed to rar.ini configuration file or RARINISWITCHES
+            environment variable. For example, if we set RARINISWITCHES
+            environment variable to -agfYYYY-MMM-DD, we can use -ag without
+            a parameter with YYYY-MMM-DD format string assumed.
 
             The format string may contain optional text enclosed in '{'
             and '}' characters. This text is inserted into archive name.
@@ -912,7 +912,7 @@
             than the creation of a new archive.
 
 
-    -cfg-   Ignore configuration file and RAR environment variable.
+    -cfg-   Ignore configuration file and RARINISWITCHES environment variable.
 
 
     -cl     Convert file names to lower case.
@@ -1475,8 +1475,8 @@
             allocation. Use -md<size> or -mdx<size> to allow unpacking
             dictionaries up to and including the specified size.
             Unlike -md<size>, -mdx<size> is applied to extraction only
-            and can be added to RAR environment variable, not affecting
-            archiving commands.
+            and can be added to rar.ini configuration file or RARINISWITCHES
+            environment variable, not affecting archiving commands.
 
             'k', 'm' and 'g' modifiers placed after the size, set kilobyte,
             megabyte and gigabyte units, like -md64m for 64 MB dictionary.
@@ -1513,6 +1513,31 @@
             to skip encrypted files when extracting or testing.
 
 
+    -mlp    Use large memory pages.
+
+            Use larger memory allocation units, which can improve archiving
+            and, in some cases, extraction speed. Typically the performance
+            gain is more significant for bigger compression dictionaries
+            and slower compression methods.
+
+            This switch requires "Lock pages in memory" privilege
+            and if it is missing, RAR proposes to assign it to the current
+            user account, making it available for other software too.
+            Windows restart is necessary to activate the newly assigned
+            privilege.
+
+            Large memory pages can't be placed to Windows swap file
+            and always occupy the physical memory. When this switch
+            is present, Windows Task Manager can display incorrect
+            memory usage values for RAR.
+
+            Available in Windows version only.
+
+            Example:
+
+            rar a -mlp backup.rar data\*
+
+    
     -ms[list]
             Specify file types to store.
 
@@ -1693,7 +1718,7 @@
     
 
     -ol[a,-]
-            Process symbolic links as the link [absolute paths, skip]
+            Process symbolic links as the link [absolute paths, skip].
             
             Save symbolic links as links, so file or directory contents
             is not archived. In Windows version it also saves reparse points
@@ -1721,6 +1746,56 @@
             regardless of -ol or -ola switch, unless -ol- is specified.
 
             Switch -ol- skips symbolic links when archiving or extracting.
+
+    -om[-|1][=list]
+            Propagate Mark of the Web.
+
+            Internet browsers can add so called Mark of the Web to downloaded
+            files. It is stored in Zone.Identifier NTFS alternate data stream
+            and provides the information about file security zone, original
+            location also as other optional fields. Various software can use
+            it for security purposes.
+
+            By default the console RAR doesn't copy contents the archive
+            Mark of the Web to files extracted from this archive,
+            but such archive Mark of the Web propagation can be enabled
+            with this switch.
+
+            If this switch is followed by '1', all Mark of the Web fields
+            are copied from archive to extracted files. For -om without '1'
+            only the security zone value is propagated. Information contained
+            in other fields might be useful to identify a file source,
+            but it can disclose the potentially confidential file download
+            location, IP address and other sensitive information if file
+            is shared with other persons. So the default behavior of this
+            switch without '1' modifier is to omit all fields except
+            the security zone value.
+
+            Optional '-' parameter prohibits Mark of the Web propagation
+            and can be used to override settings stored in rar.ini
+            configuration file or RARINISWITCHES environment variable.
+
+            Optional <list> parameter defines the list of file extensions
+            separated by semicolons. For example, -om=doc;exe;bat will
+            force RAR to propagate Mark of the Web only for *.doc, *.exe
+            and *.bat files. It is also allowed to specify wildcard
+            file masks in the list, so -om=*.doc;*.exe;*.bat will work too.
+            If list is omitted, all extracted files are assumed.
+
+            Switch -os can be used to preserve source files Mark of the Web
+            when archiving, so it is restored when extracting.
+
+            Examples:
+
+            1) rar x -om archive.rar
+
+            propagate the archive Mark of the Web to all extracted files.
+            Include security zone value only.
+
+            2) rar x -om1=doc;exe archive.rar
+
+            propagate the archive Mark of the Web to *.doc and *.exe.
+            Include all Mark of the Web fields.
 
 
     -oni    Allow potentially incompatible names.
@@ -1770,11 +1845,6 @@
             these streams.
 
             Streams are not saved for NTFS encrypted files.
-
-            Unlike GUI WinRAR, the console RAR doesn't propagate the archive
-            Mark of the Web stream to extracted files. It unpacks archived
-            Zone.Identifier streams as is, regardless of host archive
-            Zone.Identifier stream presence.
 
 
     -ow     Use this switch when archiving to save file security
@@ -2283,12 +2353,12 @@
             Use -tsp switch to preserve the original last access file time
             of source files when archiving. This switch attempts to keep
             the original last access time of archiving files, but it does not
-            control which timestamps are to be stored in archive.
+            control, which timestamps are to be stored in archive.
             It has to be combined with other -ts switches for this purpose.
             For example, if we wish to save the last access time to archive
             and preserve the last access time of source files, we need
-            to use -tsa -tsp together. Switch -tsp can prevent opening
-            some files, which can be opened without it.
+            to use -tsa -tsp together. To open some files with -tsp switch,
+            it may be necessary to run RAR as administrator.
 
             While -tsp is supported by RAR for Windows, it is not guaranteed
             to work for other platforms.
@@ -2589,6 +2659,7 @@
     10     No files matching the specified mask and options were found.
     11     Wrong password.
     12     Read error.
+    13     Bad archive.
    255     User stopped the process.
 
 
@@ -2621,7 +2692,7 @@
 
  Copyrights
 
-    (c) 1993-2024 Alexander Roshal
+    (c) 1993-2025 Alexander Roshal
 
 
 
