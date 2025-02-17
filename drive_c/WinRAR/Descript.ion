@@ -14,9 +14,6 @@ RarExtInstaller.exe  Tool to install and uninstall WinRAR shell extension
 RarExtLogo.altform-unplated_targetsize-32.png Graphic file for WinRAR shell extension
 RarExtLogo.altform-unplated_targetsize-48.png Graphic file for WinRAR shell extension
 RarExtLogo.altform-unplated_targetsize-64.png Graphic file for WinRAR shell extension
-RarExtLogo_Default.altform-unplated_targetsize-32.png Graphic file for WinRAR shell extension
-RarExtLogo_Default.altform-unplated_targetsize-48.png Graphic file for WinRAR shell extension
-RarExtLogo_Default.altform-unplated_targetsize-64.png Graphic file for WinRAR shell extension
 RarExtPackage.msix   Supplementary package for WinRAR shell extension
 RarFiles.lst         Sort order for solid archives
 RarNew.dat           New RAR archive template
