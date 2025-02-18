@@ -30,13 +30,15 @@ jobs:
     - name: Make AppImage
       run: |
         set -x
+        version=$(grep -o "WinRAR:.*" README.md | cut -d ' ' -f2)
+        echo "WinRAR version: $version"
         rm -rv .git/ .github/ .gitignore
 
         ## Aded key / crack
         wget https://raw.githubusercontent.com/Fonkelflare/winrar-rarreg.key/main/rarreg.key -O drive_c/WinRAR/rarreg.key
 
         cd ../
-        ARCH=x86_64 ./appimagetool-x86_64.AppImage WinRAR_AppImage/
+        ARCH=x86_64 VERSION="${version}-1_JB" ./appimagetool-x86_64.AppImage WinRAR_AppImage/
         pwd; ls -lah
 
     - name: Rename AppImage and generate MD5
@@ -46,14 +48,13 @@ jobs:
 
         fileName=$(ls WinRAR*.AppImage)
         echo "fileName: $fileName"
-
-        fileNameNew=$(echo "$fileName" | cut -d'-' -f1-2)
-        fileNameNew=$(echo "${fileNameNew}-x86_64-1_JB.AppImage")
-
-        mv "$fileName" "${fileNameNew}"
-        md5sum "${fileNameNew}" > "${fileNameNew}".md5
+        #fileNameNew=$(echo "$fileName" | cut -d'-' -f1-2)
+        #fileNameNew=$(echo "${fileNameNew}-x86_64-1_JB.AppImage")
+        #mv "$fileName" "${fileNameNew}"
+        #md5sum "${fileNameNew}" > "${fileNameNew}".md5
+        md5sum "${fileName}" > "${fileName}".md5
         pwd; ls -lah
-        mv "${fileNameNew}" "${fileNameNew}".zsync "${fileNameNew}".md5 WinRAR_AppImage/
+        mv "${fileName}" "${fileName}".zsync "${fileName}".md5 WinRAR_AppImage/
 
     - uses: xresloader/upload-to-github-release@main
       env:
