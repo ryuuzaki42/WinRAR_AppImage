@@ -53,7 +53,7 @@ jobs:
         mv "$fileName" "${fileNameNew}"
         md5sum "${fileNameNew}" > "${fileNameNew}".md5
         pwd; ls -lah
-        mv "${fileNameNew}" "${fileNameNew}".md5 WinRAR_AppImage/
+        mv "${fileNameNew}" "${fileNameNew}".zsync "${fileNameNew}".md5 WinRAR_AppImage/
 
     - uses: xresloader/upload-to-github-release@main
       env:
