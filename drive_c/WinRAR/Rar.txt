@@ -1,6 +1,6 @@
                              User's Manual
                              ~~~~~~~~~~~~~
-                        RAR 7.10 console version
+                        RAR 7.11 console version
                         ~~~~~~~~~~~~~~~~~~~~~~~~
 
                        =-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -30,9 +30,9 @@
  Configuration file
  ~~~~~~~~~~~~~~~~~~
 
-  RAR and UnRAR for Unix read configuration information from .rarrc file
-  in a user's home directory (stored in HOME environment variable)
-  or in /etc directory.
+  RAR and UnRAR for Unix systems read configuration information from
+  .rarrc file in a user's home directory (stored in HOME environment
+  variable) or in /etc directory.
 
   RAR and UnRAR for Windows read configuration information from rar.ini file,
   placed in the same directory as the rar.exe file.
@@ -63,7 +63,8 @@
     Default parameters may be added to the RAR command line by establishing
     an environment variable "RARINISWITCHES".
 
-    For instance, in Unix following lines may be added to your profile:
+    For instance, in Unix systems following lines may be added to your
+    profile:
 
       RARINISWITCHES='-s -md1024'
       export RARINISWITCHES
@@ -97,8 +98,8 @@
   with other entries in this file. The comment character is ';'.
 
   In Windows this file should be placed in the same directory as RAR
-  or in %APPDATA%\WinRAR directory, in Unix - to the user's home directory
-  or in /etc.
+  or in %APPDATA%\WinRAR directory, in Unix systems - to the user's home
+  directory or in /etc.
 
   Tips to provide improved compression and speed of operation:
 
@@ -154,9 +155,9 @@
 
     path_to_extract includes the destination directory name followed by
     a path separator character. For example, it can be c:\dest\ in Windows
-    or data/ in Unix. It specifies the directory to place extracted files
-    in 'x' and 'e' commands. This directory is created by RAR if it does not
-    exist yet. Alternatively it can be set with -op<path> switch.
+    or data/ in Unix systems. It specifies the directory to place extracted
+    files in 'x' and 'e' commands. This directory is created by RAR if it
+    does not exist yet. Alternatively it can be set with -op<path> switch.
 
     Many RAR commands, such as extraction, test or list, allow to use
     wildcards in archive name. If no extension is specified in archive
@@ -165,8 +166,8 @@
     *.* mask selects all files. Wildcards in archive name are not allowed
     when archiving and deleting.
 
-    In Unix you need to enclose RAR command line parameters containing
-    wildcards in single or double quotes to prevent their expansion
+    In Unix systems you need to enclose RAR command line parameters
+    containing wildcards in single or double quotes to prevent their expansion
     by Unix shell. For example, this command will extract *.asm files
     from all *.rar archives in current directory:
 
@@ -557,8 +558,8 @@
     s[name] Convert archive to SFX. The archive is merged with a SFX module
             (using a module in file default.sfx or specified in the switch).
             In Windows version default.sfx should be placed in the same
-            directory as the rar.exe, in Unix - in the user's home directory,
-            in /usr/lib or /usr/local/lib.
+            directory as the rar.exe, in Unix systems - in the user's home
+            directory, in /usr/lib or /usr/local/lib.
 
             Windows version uses default32.sfx name for 32-bit SFX module.
 
@@ -576,7 +577,7 @@
 
             rar t *
 
-            or for Unix:
+            or for Unix systems:
 
             rar t '*'
 
@@ -585,7 +586,7 @@
 
             rar t -r *
 
-            or for Unix:
+            or for Unix systems:
 
             rar t -r '*'
 
@@ -824,7 +825,8 @@
             attributes.
 
             In Windows it affects archive, system, hidden and read-only
-            attributes. in Unix - user, group, and other file permissions.
+            attributes. in Unix systems - user, group, and other file
+            permissions.
 
 
     -am[s,r]
@@ -841,7 +843,7 @@
 
             Switch -amr renames an archive to saved name. Also it sets
             the stored time as the archive creation and modification time
-            in Windows and as the archive modification time in Unix.
+            in Windows and as the archive modification time in Unix systems.
             It can be used together with 'ch' command only, which ignores
             all other archive modification switches if -amr is specified.
 
@@ -1245,8 +1247,8 @@
             parameter is not specified, the log file is created
             using the following defaults:
 
-            Unix:    .rarlog file in the user's home directory;
-            Windows: rar.log file in %APPDATA%\WinRAR directory.
+            Unix systems: .rarlog file in the user's home directory;
+            Windows:      rar.log file in %APPDATA%\WinRAR directory.
 
             If 'name' parameter includes a file name without path,
             RAR will create the log file in the default directory
@@ -1554,10 +1556,10 @@
             Several -ms switches are permitted, such as -msrar -mszip
             instead of -msrar;zip.
 
-            In Unix -ms switch containing several file types needs to be
-            enclosed in quote marks. It protects semicolons from processing
-            by Unix shell. Another solution is to use individual -ms<type>
-            switches for every file type.
+            In Unix systems -ms switch containing several file types needs
+            to be enclosed in quote marks. It protects semicolons from
+            processing by Unix shell. Another solution is to use individual
+            -ms<type> switches for every file type.
 
             If <list> is not specified, -ms switch will use the default
             set of extensions, which includes the following file types:
@@ -1725,7 +1727,7 @@
             as links. Such archive entries are restored as symbolic links
             or reparse points when extracting.
 
-            Supported both in Unix and Windows RAR versions.
+            Supported in RAR versions for both Windows and Unix systems.
 
             In Windows you may need to run RAR as administrator to create
             symbolic links when extracting.
@@ -1850,8 +1852,8 @@
     -ow     Use this switch when archiving to save file security
             information and when extracting to restore it.
 
-            Unix RAR version saves file owner and group when using
-            this switch.
+            RAR version for Unix systems saves file owner and group
+            when using this switch.
 
             Windows version stores owner, group, file permissions and
             audit information, but only if you have necessary privileges
@@ -2126,8 +2128,8 @@
             archive, a Self-Extracting archive (using a module in file
             default.sfx or specified in the switch) would be created.
             In Windows version default.sfx should be placed in the same
-            directory as the rar.exe, in Unix - in the user's home directory,
-            in /usr/lib or /usr/local/lib.
+            directory as the rar.exe, in Unix systems - in the user's home
+            directory, in /usr/lib or /usr/local/lib.
 
             Windows version uses default32.sfx name for 32-bit SFX module.
 
@@ -2249,7 +2251,7 @@
             0 seconds of 20 November 2001".
 
             Use 'm', 'c', 'a' modifiers to specify modification,
-            creation (ctime in Unix) and last access time accordingly,
+            creation (ctime in Unix systems) and last access time accordingly,
             such as -tac20011120 for creation time or ctime.
             If such modifier is omitted, the modification time is assumed.
 
@@ -2292,7 +2294,7 @@
             2 hours 30 minutes.
 
             Use 'm', 'c', 'a' modifiers to specify modification,
-            creation (ctime in Unix) and last access time accordingly,
+            creation (ctime in Unix systems) and last access time accordingly,
             such as -tnc2h30m for creation time or ctime.
             If such modifier is omitted, the modification time is assumed.
 
@@ -2319,7 +2321,7 @@
 
             Use -tsm to save the file modification time. Switch -tsc saves
             the creation time in Windows and the change time, also known
-            as ctime, in Unix. Switch -tsa saves the last access time.
+            as ctime, in Unix systems. Switch -tsa saves the last access time.
             Multiple -ts switches, such as -tsc -tsa, are allowed.
             If 'm', 'c' or 'a' are not specified, all three file times
             are assumed.
@@ -2327,10 +2329,11 @@
             Append '+' to store a file time with maximum possible precision.
             The exact value depends on the particular operating system
             also as the file system and can be up to 100 nanoseconds
-            in Windows and 1 nanosecond in Unix. Append '1' to set 1 second
-            precision or '-' to not save a file time, such as -ts- to omit
-            all 3 times. If '+', '-' or '1' are not present, '+' is assumed,
-            so -ts+ and -ts both save all three high precision times.
+            in Windows and 1 nanosecond in Unix systems. Append '1' to set
+            1 second precision or '-' to not save a file time, such as -ts-
+            to omit all 3 times. If '+', '-' or '1' are not present,
+            '+' is assumed, so -ts+ and -ts both save all three high
+            precision times.
 
             All stored times for same file always have the same precision.
             If different precisions are specified, such as -tsm1 -tsc+,
@@ -2342,13 +2345,13 @@
             By default RAR sets only the modification time for extracted files,
             even if archive contains other times. Use -ts or -ts+ when
             unpacking to set all three times, -tsc and -tsa to set
-            creation (ctime in Unix) and last access times, -tsm- or -ts-
-            to set the current system time instead of modification time
-            stored in archive.
+            creation (ctime in Unix systems) and last access times,
+            -tsm- or -ts- to set the current system time instead of
+            modification time stored in archive.
 
             Windows allows to set all three file times when unpacking.
-            In Unix we can set the modification and last access, but not
-            the change time.
+            In Unix systems we can set the modification and last access,
+            but not the change time.
 
             Use -tsp switch to preserve the original last access file time
             of source files when archiving. This switch attempts to keep
@@ -2574,9 +2577,9 @@
             If you need a mask with wildcards to exclude several directories,
             use the special syntax for directory exclusion masks.
             Such masks must have the trailing path separator character
-            ('\' for Windows and '/' for Unix). For example, "*tmp*\" mask
-            will exclude all directories matching "*tmp*" and "*\tmp\" will
-            exclude all 'tmp' directories. Since wildcards are present,
+            ('\' for Windows and '/' for Unix systems). For example, "*tmp*\"
+            mask will exclude all directories matching "*tmp*" and "*\tmp\"
+            will exclude all 'tmp' directories. Since wildcards are present,
             both masks will be applied to contents of current directory
             and all its subdirectories.
 
