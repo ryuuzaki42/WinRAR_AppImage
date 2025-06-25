@@ -1,6 +1,37 @@
                 WinRAR - What's new in the latest version
 
 
+   Version 7.12
+
+  1. When extracting a file, previous versions of WinRAR, Windows versions
+     of RAR, UnRAR, portable UnRAR source code and UnRAR.dll can be tricked
+     into using a path, defined in a specially crafted archive,
+     instead of user specified path.
+
+     Unix versions of RAR, UnRAR, portable UnRAR source code
+     and UnRAR library, also as RAR for Android, are not affected.
+
+     We are thankful to whs3-detonator working with Trend Micro Zero Day
+     Initiative for letting us know about this security issue.
+
+  2. Previously "Generate report" command included archived file names
+     into HTML report as is, allowing to inject potentially unsafe HTML tags
+     into the report. To prevent such injection the current version replaces
+     < and > file name characters in HTML report with &lt; and &gt; strings.
+
+     We are thankful to Marcin Bobryk (github.com/MarcinB44) for bringing
+     this security issue to our attention.
+  
+  3. If "Test archived files" and "recovery volumes" archiving options
+     are used together, recovery volumes are also tested. Previous versions
+     completed the test before creating recovery volumes, so they hadn't
+     been verified.
+
+  4. Nanosecond file time precision is preserved for Unix file records
+     when modifying RAR archive in Windows. Previously it was converted
+     to Windows 100 nanosecond precision.
+
+   
    Version 7.11
 
   1. If "Add to archive..." Explorer context menu command is applied to
