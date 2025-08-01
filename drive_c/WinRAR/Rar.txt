@@ -1,6 +1,6 @@
                              User's Manual
                              ~~~~~~~~~~~~~
-                        RAR 7.12 console version
+                        RAR 7.13 console version
                         ~~~~~~~~~~~~~~~~~~~~~~~~
 
                        =-=-=-=-=-=-=-=-=-=-=-=-=-=-
