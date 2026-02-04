@@ -1,12 +1,14 @@
 
 # WinRAR_AppImage
 
-## Repository: https://github.com/ryuuzaki42/WinRAR_AppImage
-     WinRAR: 7.20
+ - WinRAR + Wine
 
-## Remove the git folder (.git/ .github/ .gitignore) before creating the AppImage
+WinRAR is a file archiver and compression utility for Microsoft Windows.
 
 https://www.win-rar.com/
+
+## Repository: https://github.com/ryuuzaki42/WinRAR_AppImage
+     WinRAR: 7.20
 
 ---
 ### To change font size, change the DPI value in LogPixels.
