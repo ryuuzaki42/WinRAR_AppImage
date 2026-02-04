@@ -2,7 +2,7 @@
 # WinRAR_AppImage
 
 ## Repository: https://github.com/ryuuzaki42/WinRAR_AppImage
-     WinRAR: 7.13
+     WinRAR: 7.20
 
 ## Remove the git folder (.git/ .github/ .gitignore) before creating the AppImage
 

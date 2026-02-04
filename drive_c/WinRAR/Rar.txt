@@ -1,6 +1,6 @@
                              User's Manual
                              ~~~~~~~~~~~~~
-                        RAR 7.13 console version
+                        RAR 7.20 console version
                         ~~~~~~~~~~~~~~~~~~~~~~~~
 
                        =-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -32,7 +32,9 @@
 
   RAR and UnRAR for Unix systems read configuration information from
   .rarrc file in a user's home directory (stored in HOME environment
-  variable) or in /etc directory.
+  variable), in /etc directory, in $XDG_CONFIG_HOME/rar
+  or in $HOME/.config/rar if XDG_CONFIG_HOME environment variable
+  isn't defined.
 
   RAR and UnRAR for Windows read configuration information from rar.ini file,
   placed in the same directory as the rar.exe file.
@@ -739,10 +741,12 @@
             characters:
 
             Y   - year
-            M   - month
-            MMM - month name as text string (Jan, Feb, etc.)
+            M   - 1 or 2 'M' define the month number
+            MMM - 3 or more 'M' define the month name as a text string
+            O   - month name as a text string regardless of characters number
             W   - a week number (a week starts with Monday)
             A   - day of week number (Monday is 1, Sunday - 7)
+            K   - day of week name as a text string
             D   - day of month
             E   - day of year
             H   - hours
@@ -760,6 +764,8 @@
             Each of format string characters listed above represents only
             one character added to archive name. For example, use WW for
             two digit week number or YYYY to define four digit year.
+            Excessive format characters exceeding the available field width
+            are ignored.
 
             If the first character in the format string is '+', positions
             of the date string and base archive name are exchanged,
@@ -1703,19 +1709,24 @@
             present, it is assumed to be 64 KB by default. Selecting
             too small <minsize> may increase the time required to detect
             identical files.
-    
-            Switches -oi1 and -oi2 are supported only by RAR 5.0 format.
+
+            <minsize> can include an optional trailing unit type character.
+            Unit type can be 'b' or 'B' for bytes, 'k' for kilobytes,
+            'K' for thousands of bytes, 'm' for megabytes, 'M' for millions
+            of bytes, 'g' for gigabytes, 'G' for billions of bytes,
+            't' for terabytes, 'T' for trillions of bytes. If this character
+            is not present, bytes are assumed.
 
             Examples:
 
             1) rar a -oi archive
 
-            Save contents of current directory to archive.rar.
+            Save the current directory contents to archive.rar.
             Store identical files as references.
 
-            2) rar a -oi3:1000000 -r dummy c:\photo\*.jpg
+            2) rar a -oi3:1M -r dummy c:\photo\*.jpg
 
-            List all duplicate *.jpg files, larger than or equal to
+            List all duplicate *.jpg files larger than or equal to
             1000000 bytes, found in c:\photo and its subdirectories.
     
 
@@ -2036,9 +2047,10 @@
             See the 'rv[N]' command description for details.
 
 
-    -s      Create solid archive. A solid archive is an archive packed by
+    -s[=<par>]
+            Create solid archive. Solid archive is an archive packed by
             a special compression method, which treats several or all
-            files, within the archive, as one continuous data stream.
+            files within the archive as one continuous data stream.
 
             Solid archiving significantly increases compression, when
             adding a large number of small, similar files. But it also
@@ -2050,19 +2062,43 @@
             But it is possible to disable sorting with -ds switch or set
             an alternative file order using a special file, rarfiles.lst.
 
+            This switch can include one or more optional modifiers after '='
+            character. Most of these modifiers control the solid statistics
+            reset inside of archive, overriding the continuous solid stream
+            mode of plain -s switch. Resetting the statistics typically
+            leads to lower compression, faster access to individual files,
+            stored after reset, and higher chances to extract such files
+            if archive was broken. Here are switches with possible modifiers.
+
+            -s=-  Disable solid archiving. It allows to override -s in rar.ini
+            configuration file or RARINISWITCHES environment variable.
+
+            -s=d  Do not reset the solid statistics between volumes.
+
+            -s=v  Always reset the solid statistics between volumes.
+            By default RAR resets the solid statistics at the first new file
+            in a new volume, provided that enough data was packed since
+            the previous reset. This switch resets it regardless of data size.
+
+            -s=e  Reset the solid statistics if file extension is changed.
+
+            -s=<N>f  Reset the solid statistics after adding every N files.
+
+            -s=<N><k|m|g>  Reset the solid statistics after packing every
+            data block of specified size in KB, MB or GB, such as -s=100m.
+
+            -s=r  Reset the solid statistics before adding new files
+            to existing archive.
+
+            It is allowed to combine multiple modifiers in the same switch,
+            such as -s=e100f.
+
             Example:
 
             add all *.c and *.h files from the current directory to
             the solid archive sources.rar:
 
             rar a -s sources.rar *.c *.h
-
-
-    -s<N>   Create solid groups using the file count
-
-            Similar to -s, but resets solid statistics after compressing
-            <N> files. Usually decreases compression, but also
-            decreases losses in case of solid archive damages.
 
 
     -sc<charset>[objects]
@@ -2114,13 +2150,6 @@
             4) rar lb -scur data > list.txt
 
             Save archived file names in data.rar to list.txt in Unicode.
-
-
-    -se     Create solid groups using extension
-
-            Similar to -s, but resets solid statistics if file extension
-            is changed. Usually decreases compression, but also
-            decreases losses from solid archive damages.
 
 
     -sfx[name]
@@ -2197,42 +2226,6 @@
             of bytes. If this character is not present, bytes are assumed.
 
 
-    -sv     Create independent solid volumes
-
-            By default RAR tries to reset solid statistics as soon
-            as possible when starting a new volume, but only
-            if enough data was packed after a previous reset
-            (at least a few megabytes).
-
-            This switch forces RAR to ignore packed data size and attempt
-            to reset statistics for volumes of any size. It decreases
-            compression, but increases chances to extract a part of data
-            if one of several solid volumes in a volume set was lost
-            or damaged.
-
-            Note that sometimes RAR cannot reset statistics even
-            using this switch. For example, it cannot be done when
-            compressing one large file split between several volumes.
-            RAR is able to reset solid statistics only between separate
-            files, but not inside of single file.
-
-            Ignored if used when creating a non-volume archive.
-
-
-    -sv-    Create dependent solid volumes
-
-            Disables to reset solid statistics between volumes.
-
-            It slightly increases compression, but significantly reduces
-            chances to extract a part of data if one of several solid
-            volumes in a volume set was lost or damaged.
-
-            Ignored if used when creating a non-volume archive.
-
-
-    -s-     Disable solid archiving
-
-
     -t      Test files after archiving. This switch is especially
             useful in combination with the move command, so files will be
             deleted only if the archive had been successfully tested.
@@ -2242,13 +2235,12 @@
             Process only files modified after the specified date.
             Files matching the specified date exactly are also included.
 
-            Format of the date string is YYYYMMDDHHMMSS.
-            It is allowed to insert separators like '-' or ':' to
-            the date string and omit trailing fields. For example,
-            the following switch is correct: -ta2001-11-20
-            Internally it will be expanded to -ta20011120000000
-            and treated as "files modified after 0 hour 0 minutes
-            0 seconds of 20 November 2001".
+            Format of the date string is YYYYMMDDHHMMSS. It is allowed to
+            insert separators like '-' or ':' to the date string and omit
+            trailing fields. For example, switch -ta2001-11-20 is correct. 
+            Internally it will be expanded to -ta20011120000000 and treated
+            as "files modified after 0 hour 0 minutes 0 seconds
+            on 20 November 2001".
 
             Use 'm', 'c', 'a' modifiers to specify modification,
             creation (ctime in Unix systems) and last access time accordingly,
@@ -2273,11 +2265,20 @@
             Format of the switch is the same as -ta<date>.
 
 
-    -tk     Keep original archive date. Prevents RAR from modifying the
-            archive date when changing an archive.
+    -tk[<date>]
+            Keep the original or set the specified archive time.
+            
+            If used without parameter, prevents RAR from modifying
+            the archive time when changing an archive.
+
+            Optional date parameter in YYYYMMDDHHMMSS format specifies
+            the date to assign to archive modification time. It is allowed
+            to insert separators like '-' or ':' to the date string
+            and omit trailing fields. For example, switch -tk2025-06-01
+            is correct.
 
 
-    -tl     Set archive time to newest file. Forces RAR to set the date of a
+    -tl     Set archive time to newest file. Forces RAR to set the time of
             changed archive to the date of the newest file in the archive.
 
 
@@ -2695,7 +2696,7 @@
 
  Copyrights
 
-    (c) 1993-2025 Alexander Roshal
+    (c) 1993-2026 Alexander Roshal
 
 
 
